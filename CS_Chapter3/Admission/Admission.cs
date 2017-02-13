@@ -14,19 +14,12 @@ namespace Admission
             double gpa = Convert.ToDouble(gpaInput);
             Console.WriteLine("What is your admissions test score?");
             String testInput = Console.ReadLine();
-            double test = Convert.ToDouble(gpaInput);
+            double test = Convert.ToDouble(testInput);
 
-            if (gpa >= 3.2 && test >= 60)
+            if (gpa >= 3.0 && test >= 60 || gpa <= 3.0 && test >= 80)
             {
-                if (gpa <= 3.2 && test >= 80)
                     Console.WriteLine("ACCEPT");
             }
-
-            else
-            {
-                Console.WriteLine("REJECT");
-            }
-
             else
             { 
                 Console.WriteLine("REJECT");
